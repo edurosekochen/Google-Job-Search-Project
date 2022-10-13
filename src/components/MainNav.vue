@@ -11,9 +11,6 @@
 				"
 			>
 				<a href="/" class="flex items-center h-full text-xl">{{ company }}</a>
-				<h2 class="flex items-center h-full ml-8">
-					Developed by {{ author.firstname }} {{ author.lastname }}
-				</h2>
 			</div>
 		</div>
 	</header>
@@ -25,7 +22,6 @@ export default {
 	data() {
 		return {
 			company: "Dudu Careers",
-			author: { firstname: "Dudu", lastname: "Rose" },
 		};
 	},
 };
