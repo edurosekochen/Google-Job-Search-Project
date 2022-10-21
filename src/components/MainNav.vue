@@ -7,7 +7,7 @@
 					h-full
 					px-8
 					mx-auto
-					border-b border-solid border-brand-grey-1
+					border-b border-solid border-brand-gray-1
 				"
 			>
 				<a :href="url" class="flex items-center h-full text-xl">{{
@@ -22,33 +22,60 @@
 							class="h-full ml-9 first:ml-0"
 							data-test="main-nav-list-item"
 						>
-							<a href="" class="flex items-center h-full py-2.5">
-								{{ menuItem }}
-							</a>
+							<a href="/" class="flex items-center h-full py-2.5">{{
+								menuItem
+							}}</a>
 						</li>
 					</ul>
 				</nav>
+
+				<div class="flex items-center h-full ml-auto">
+					<profile-image v-if="isLoggedIn" data-test="profile-image" />
+					<action-button
+						v-else
+						text="Sign in"
+						data-test="login-button"
+						@click="loginUser"
+					/>
+				</div>
 			</div>
+
+			<subnav v-if="isLoggedIn" data-test="subnav" />
 		</div>
 	</header>
 </template>
 
 <script>
+import ActionButton from "@/components/ActionButton.vue";
+import ProfileImage from "@/components/ProfileImage.vue";
+import Subnav from "@/components/Subnav.vue";
+
 export default {
 	name: "MainNav",
+	components: {
+		ActionButton,
+		ProfileImage,
+		Subnav,
+	},
 	data() {
 		return {
 			company: "Dudu Careers",
-			url: "http://careers.google.com",
+			url: "https://careers.google.com",
 			menuItems: [
 				"Teams",
 				"Locations",
-				"Life at Dudu",
+				"Life at Bobo",
 				"How we hire",
 				"Students",
 				"Jobs",
 			],
+			isLoggedIn: false,
 		};
+	},
+	methods: {
+		loginUser() {
+			this.isLoggedIn = true;
+		},
 	},
 };
 </script>
