@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/v-on-event-hyphenation -->
 <template>
 	<form
 		class="
@@ -14,14 +15,14 @@
 
 		<div class="flex flex-nowrap flex-1 h-full text-base font-light">
 			<div class="relative flex items-center flex-1 h-full pr-3">
-				<label class="absolute left-0 -top-10"> Role : {{ role }}</label>
-				<input
-					v-model="role"
-					type="text"
+				<label class="absolute left-0 -top-10">Role</label>
+				<text-input
 					placeholder="Software engineer"
-					class="w-full text-lg font-normal focus:outline-none"
+					:value="role"
+					@handleInput="role = $event"
 				/>
 			</div>
+
 			<span
 				class="
 					flex
@@ -31,31 +32,32 @@
 					border-l border-r border-brand-gray-3
 					bg-brand-gray-2
 				"
+				>in</span
 			>
-				in
-			</span>
 
 			<div class="relative flex items-center flex-1 h-full pl-3">
-				<label class="absolute left-0 -top-10"> Where? </label>
-				<input
-					v-model="location"
-					type="text"
+				<label class="absolute left-0 -top-10">Where?</label>
+				<text-input
 					placeholder="Los Angeles"
-					class="w-full text-lg font-normal focus:outline-none"
+					:value="location"
+					@handleInput="location = $event"
 				/>
 			</div>
 		</div>
+
 		<action-button text="Search" type="secondary" class="rounded-r-3xl" />
 	</form>
 </template>
 
 <script>
 import ActionButton from "@/components/Shared/ActionButton.vue";
+import TextInput from "@/components/Shared/TextInput.vue";
 
 export default {
 	name: "JobSearchForm",
 	components: {
 		ActionButton,
+		TextInput,
 	},
 	data() {
 		return {
