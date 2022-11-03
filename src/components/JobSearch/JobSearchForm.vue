@@ -10,6 +10,7 @@
 			border border-solid border-brand-gray-3
 			rounded-3xl
 		"
+		@submit.prevent="searchForJobs"
 	>
 		<font-awesome-icon :icon="['fas', 'search']" class="ml-4 mr-3" />
 
@@ -18,6 +19,7 @@
 				<label class="absolute left-0 -top-10">Role</label>
 				<text-input
 					placeholder="Software engineer"
+					data-test="role-input"
 					:value="role"
 					@handleInput="role = $event"
 				/>
@@ -40,12 +42,18 @@
 				<text-input
 					placeholder="Los Angeles"
 					:value="location"
+					data-test="location-input"
 					@handleInput="location = $event"
 				/>
 			</div>
 		</div>
 
-		<action-button text="Search" type="secondary" class="rounded-r-3xl" />
+		<action-button
+			text="Search"
+			type="secondary"
+			class="rounded-r-3xl"
+			data-test="form-submit-button"
+		/>
 	</form>
 </template>
 
@@ -64,6 +72,17 @@ export default {
 			role: "",
 			location: "",
 		};
+	},
+	methods: {
+		searchForJobs() {
+			this.$router.push({
+				name: "JobResults",
+				query: {
+					role: this.role,
+					location: this.location,
+				},
+			});
+		},
 	},
 };
 </script>
