@@ -60,3 +60,4 @@ describe("Spotlight", () => {
     expect(wrapper.text()).toMatch("Some description");
   });
 });
+
