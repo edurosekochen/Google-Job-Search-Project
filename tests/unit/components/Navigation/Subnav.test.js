@@ -9,8 +9,8 @@ describe("Subnav", () => {
         $route: {
           name: routeName,
         },
+        $store,
       },
-      $store,
       stubs: {
         FontAwesomeIcon: true,
       },
@@ -22,12 +22,11 @@ describe("Subnav", () => {
       const routeName = "JobResults";
       const $store = {
         getters: {
-          FILTERED_JOBS_BY_ORGANIZATIONS: [{ id: 1 }, { id: 2 }],
+          FILTERED_JOBS: [{ id: 1 }, { id: 2 }],
         },
       };
       const wrapper = mount(Subnav, createConfig(routeName, $store));
       const jobCount = wrapper.find("[data-test='job-count']");
-      expect(jobCount.exists()).toBe(true);
       expect(jobCount.text()).toMatch("2 jobs matched");
     });
   });

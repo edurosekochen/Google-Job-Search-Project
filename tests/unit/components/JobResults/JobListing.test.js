@@ -29,6 +29,7 @@ describe("JobListing", () => {
     const wrapper = mount(JobListing, createConfig(jobProps));
     expect(wrapper.text()).toMatch("Vue Programmer");
   });
+
   it("renders job organization", () => {
     const jobProps = createJobProps({ organization: "AirBnB" });
     const wrapper = mount(JobListing, createConfig(jobProps));
@@ -44,7 +45,7 @@ describe("JobListing", () => {
 
   it("renders job qualifications", () => {
     const jobProps = createJobProps({
-      minimumQualifications: ["Code", "Develop"],
+      minimumQualifications: ["Code", "Developp"],
     });
     const wrapper = mount(JobListing, createConfig(jobProps));
     expect(wrapper.text()).toMatch("Code");

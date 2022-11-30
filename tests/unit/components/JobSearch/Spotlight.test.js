@@ -5,7 +5,7 @@ jest.mock("axios");
 import Spotlight from "@/components/JobSearch/Spotlight.vue";
 
 describe("Spotlight", () => {
-  const mockSpotightResponse = (data = {}) => {
+  const mockSpotlightResponse = (data = {}) => {
     axios.get.mockResolvedValue({
       data: [
         {
@@ -19,13 +19,13 @@ describe("Spotlight", () => {
   };
 
   it("provides img attribute to parent component", async () => {
-    const data = { img: "Some image" };
-    mockSpotightResponse({ data });
+    mockSpotlightResponse({ img: "Some image" });
     const wrapper = mount(Spotlight, {
       slots: {
         default: `<template #default="slotProps">
-          <h1>{{ slotProps.img}}</h1>
-        </template>`,
+          <h1>{{ slotProps.img }}</h1>
+        </template>
+        `,
       },
     });
     await flushPromises();
@@ -33,13 +33,13 @@ describe("Spotlight", () => {
   });
 
   it("provides title attribute to parent component", async () => {
-    const data = { title: "Some title" };
-    mockSpotightResponse({ data });
+    mockSpotlightResponse({ title: "Some title" });
     const wrapper = mount(Spotlight, {
       slots: {
         default: `<template #default="slotProps">
-          <h1>{{ slotProps.title}}</h1>
-        </template>`,
+          <h1>{{ slotProps.title }}</h1>
+        </template>
+        `,
       },
     });
     await flushPromises();
@@ -47,17 +47,16 @@ describe("Spotlight", () => {
   });
 
   it("provides description attribute to parent component", async () => {
-    const data = { description: "Some description" };
-    mockSpotightResponse({ data });
+    mockSpotlightResponse({ description: "Some description" });
     const wrapper = mount(Spotlight, {
       slots: {
         default: `<template #default="slotProps">
-          <h1>{{ slotProps.description}}</h1>
-        </template>`,
+          <h1>{{ slotProps.description }}</h1>
+        </template>
+        `,
       },
     });
     await flushPromises();
     expect(wrapper.text()).toMatch("Some description");
   });
 });
-

@@ -12,7 +12,7 @@ describe("HeaderContainer", () => {
     expect(wrapper.text()).toMatch("Some title");
   });
 
-  it("allows parent component to provide subtile content", () => {
+  it("allows parent component to provide subtitle content", () => {
     const wrapper = mount(HeaderContainer, {
       slots: {
         subtitle: "<h3>Some subtitle</h3>",
