@@ -1,11 +1,19 @@
-// const numbers = [1, 3, 5, 7, 2, 9, 11, 6];
+const { reactive, computed, toRefs } = require("vue");
 
-// console.log(numbers.filter((number) => number > 6));
+const person = reactive({
+  firstName: "Boris",
+  lastName: "Paskhaver",
+});
 
-const jobs = [
-  { title: "Angular Developer", organization: "Microsoft" },
-  { title: "Programmer", organization: "Google" },
-  { title: "Developer", organization: "Microsoft" },
-];
+const { firstName, lastName } = toRefs(person);
 
-console.log(jobs.filter((job) => job.organization === "Microsoft"));
+const title = computed(() => `${firstName.value} ${lastName.value} the Great`);
+
+console.log(title.value);
+
+person.firstName = "Napoleon";
+console.log(title.value);
+
+person.lastName = "Griffin";
+console.log(title.value);
+
