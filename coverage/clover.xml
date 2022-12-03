@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1656534928027" clover="3.2.0">
-  <project timestamp="1656534928027" name="All files">
-    <metrics statements="59" coveredstatements="59" conditionals="6" coveredconditionals="6" methods="27" coveredmethods="27" elements="92" coveredelements="92" complexity="0" loc="59" ncloc="59" packages="6" files="13" classes="13"/>
+<coverage generated="1669937462293" clover="3.2.0">
+  <project timestamp="1669937462293" name="All files">
+    <metrics statements="52" coveredstatements="52" conditionals="4" coveredconditionals="4" methods="22" coveredmethods="22" elements="78" coveredelements="78" complexity="0" loc="52" ncloc="52" packages="6" files="11" classes="11"/>
     <package name="api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="getJobs.js" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/api/getJobs.js">
+      <file name="getJobs.js" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\api\getJobs.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -14,7 +14,7 @@
     </package>
     <package name="components.JobResults">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="JobListing.vue" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/components/JobResults/JobListing.vue">
+      <file name="JobListing.vue" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\components\JobResults\JobListing.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="64" count="2" type="stmt"/>
         <line num="74" count="5" type="stmt"/>
@@ -22,32 +22,19 @@
     </package>
     <package name="components.Navigation">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="ProfileImage.vue" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/components/Navigation/ProfileImage.vue">
+      <file name="ProfileImage.vue" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\components\Navigation\ProfileImage.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.Shared">
-      <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
-      <file name="Accordion.vue" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/components/Shared/Accordion.vue">
-        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="30" count="8" type="stmt"/>
-        <line num="36" count="16" type="cond" truecount="2" falsecount="0"/>
-        <line num="41" count="8" type="stmt"/>
-      </file>
-      <file name="ActionButton.vue" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/components/Shared/ActionButton.vue">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="20" count="7" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-      </file>
-      <file name="HeaderContainer.vue" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/components/Shared/HeaderContainer.vue">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="HeaderContainer.vue" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\components\Shared\HeaderContainer.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="11" count="1" type="stmt"/>
       </file>
-      <file name="TextInput.vue" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/components/Shared/TextInput.vue">
+      <file name="TextInput.vue" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\components\Shared\TextInput.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="12" count="2" type="stmt"/>
         <line num="28" count="5" type="stmt"/>
@@ -55,13 +42,13 @@
     </package>
     <package name="store">
       <metrics statements="36" coveredstatements="36" conditionals="4" coveredconditionals="4" methods="17" coveredmethods="17"/>
-      <file name="actions.js" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/store/actions.js">
+      <file name="actions.js" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\store\actions.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
       </file>
-      <file name="constants.js" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/store/constants.js">
+      <file name="constants.js" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\store\constants.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="8" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
@@ -74,7 +61,7 @@
         <line num="16" count="8" type="stmt"/>
         <line num="17" count="8" type="stmt"/>
       </file>
-      <file name="getters.js" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/store/getters.js">
+      <file name="getters.js" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\store\getters.js">
         <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11"/>
         <line num="9" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -93,7 +80,7 @@
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
       </file>
-      <file name="mutations.js" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/store/mutations.js">
+      <file name="mutations.js" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\store\mutations.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="8" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
@@ -101,7 +88,7 @@
         <line num="16" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
       </file>
-      <file name="state.js" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/store/state.js">
+      <file name="state.js" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\store\state.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
@@ -109,7 +96,7 @@
     </package>
     <package name="utils">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="nextElementInList.js" path="/Users/stride-admin/Desktop/job-search-checkpoints/job-search-end-of-section-26/src/utils/nextElementInList.js">
+      <file name="nextElementInList.js" path="C:\Users\Dudu\Desktop\Dev\Vue\Vue-Boris Paskhaver\job-search\src\utils\nextElementInList.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
