@@ -35,22 +35,27 @@
 	</main>
 </template>
 
-<script>
-import { computed, onMounted } from "vue";
+<script lang="ts">
+import { computed, defineComponent, onMounted } from "vue";
 import useCurrentPage from "@/composables/useCurrentPage";
 import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages";
 
-import { useFilteredJobs, useFetchJobsDispatch } from "@/store/composables";
+import {
+	useFilteredJobs,
+	useFetchJobsDispatch,
+	useFetchDegreesDispatch,
+} from "@/store/composables";
 
 import JobListing from "@/components/JobResults/JobListing.vue";
 
-export default {
+export default defineComponent({
 	name: "JobListings",
 	components: {
 		JobListing,
 	},
 	setup() {
 		onMounted(useFetchJobsDispatch);
+		onMounted(useFetchDegreesDispatch);
 
 		const filteredJobs = useFilteredJobs();
 		const currentPage = useCurrentPage();
@@ -71,5 +76,5 @@ export default {
 
 		return { previousPage, nextPage, currentPage, displayedJobs };
 	},
-};
+});
 </script>

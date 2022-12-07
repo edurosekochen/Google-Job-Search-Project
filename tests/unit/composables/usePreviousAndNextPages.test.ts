@@ -2,7 +2,7 @@ import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages";
 
 describe("usePreviousAndNextPages", () => {
   it("calculates page before current one", () => {
-    const currentPage = { value: 8 };
+    const currentPage = { value: 8 }; // ref(8)
     const maxPage = { value: 10 };
     const { previousPage } = usePreviousAndNextPages(currentPage, maxPage);
     expect(previousPage.value).toBe(7);

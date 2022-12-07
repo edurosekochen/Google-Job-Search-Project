@@ -17,10 +17,10 @@
 	</div>
 </template>
 
-<script>
-import { computed, ref } from "vue";
+<script lang=ts>
+import { computed, ref, defineComponent } from "vue";
 
-export default {
+export default defineComponent({
 	name: "Accordion",
 	props: {
 		header: {
@@ -41,5 +41,5 @@ export default {
 
 		return { open, isOpen, caretIcon };
 	},
-};
+});
 </script>
