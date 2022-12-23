@@ -61,6 +61,31 @@ describe("getters", () => {
     });
   });
 
+  describe("INCLUDE_JOB_BY_SKILL", () => {
+    it("identifies if job matches user's skills", () => {
+      const state = createState({ skillsSearchTerm: "Vue" });
+      const job = createJob({ title: "Vue Developer" });
+      const includeJob = getters.INCLUDE_JOB_BY_SKILL(state)(job);
+      expect(includeJob).toBe(true);
+    });
+
+    it("handles inconsistent character casing", () => {
+      const state = createState({ skillsSearchTerm: "vuE" });
+      const job = createJob({ title: "Vue Developer" });
+      const includeJob = getters.INCLUDE_JOB_BY_SKILL(state)(job);
+      expect(includeJob).toBe(true);
+    });
+  });
+
+  describe("when the user has not entered any skill", () => {
+    it("includes job", () => {
+      const state = createState({ skillsSearchTerm: "Vue" });
+      const job = createJob({ title: "Vue Developer" });
+      const includeJob = getters.INCLUDE_JOB_BY_SKILL(state)(job);
+      expect(includeJob).toBe(true);
+    });
+  });
+
   describe("INCLUDE_JOB_BY_JOB_TYPE", () => {
     describe("when the user has not selected any job types", () => {
       it("includes job", () => {
@@ -106,14 +131,16 @@ describe("getters", () => {
   });
 
   describe("FILTERED_JOBS", () => {
-    it("filters jobs by organization and job type, and degree", () => {
+    it("filters jobs by organization and job type degree and skills", () => {
       const INCLUDE_JOB_BY_ORGANIZATION = jest.fn().mockReturnValue(true);
       const INCLUDE_JOB_BY_JOB_TYPE = jest.fn().mockReturnValue(true);
       const INCLUDE_JOB_BY_DEGREE = jest.fn().mockReturnValue(true);
+      const INCLUDE_JOB_BY_SKILL = jest.fn().mockReturnValue(true);
       const mockGetters = {
         INCLUDE_JOB_BY_ORGANIZATION,
         INCLUDE_JOB_BY_JOB_TYPE,
         INCLUDE_JOB_BY_DEGREE,
+        INCLUDE_JOB_BY_SKILL,
       };
       const job = createJob({ title: "Best job ever" });
       const state = createState({ jobs: [job] });
@@ -122,6 +149,7 @@ describe("getters", () => {
       expect(INCLUDE_JOB_BY_ORGANIZATION).toHaveBeenCalledWith(job);
       expect(INCLUDE_JOB_BY_JOB_TYPE).toHaveBeenCalledWith(job);
       expect(INCLUDE_JOB_BY_DEGREE).toHaveBeenCalledWith(job);
+      expect(INCLUDE_JOB_BY_SKILL).toHaveBeenCalledWith(job);
     });
   });
 });
